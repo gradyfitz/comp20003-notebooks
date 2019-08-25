@@ -96,10 +96,10 @@ function runTest1
     # List of strings which should be present in the results file.
     # ( |^)([^,]*)
     # $1"$2"
-    RESULTS_PRESENT=("2018-01-01 -->" "VendorID: 2 ||" "passenger_count: 3 ||" "trip_distance: 4 ||" "RatecodeID: 5 ||" "store_and_fwd_flag: F ||" "PULocationID: 6 ||" "DOLocationID: 7 ||" "payment_type: 8 ||" "fare_amount: 9 ||" "extra: 1 ||" "mta_tax: 2 ||" "tip_amount: 3 ||" "tolls_amount: 4 ||" "improvement_surcharge: 5 ||" "total_amount: 6 ||" "DOdatetime: 2018-01-01 ||" "trip_duration: 9 ||")
+    RESULTS_PRESENT=("2018-01-01 -->" "VendorID: 2 ||" "passenger_count: 3 ||" "trip_distance: 4 ||" "RatecodeID: 5 ||" "store_and_fwd_flag: F ||" "PULocationID: 6 ||" "DOLocationID: 7 ||" "payment_type: 8 ||" "fare_amount: 9 ||" "extra: 1 ||" "mta_tax: 2 ||" "tip_amount: 3 ||" "tolls_amount: 4 ||" "improvement_surcharge: 5 ||" "total_amount: 6 ||" "DOdatetime: 2019-01-01 ||" "trip_duration: 9 ||")
     
     # Lines which should be present in the results file.
-    RESULTS_LINES_PRESENT=("2018-01-01 --> VendorID: 2 || passenger_count: 3 || trip_distance: 4 || RatecodeID: 5 || store_and_fwd_flag: F || PULocationID: 6 || DOLocationID: 7 || payment_type: 8 || fare_amount: 9 || extra: 1 || mta_tax: 2 || tip_amount: 3 || tolls_amount: 4 || improvement_surcharge: 5 || total_amount: 6 || DOdatetime: 2018-01-01 || trip_duration: 9 ||")
+    RESULTS_LINES_PRESENT=("2018-01-01 --> VendorID: 2 || passenger_count: 3 || trip_distance: 4 || RatecodeID: 5 || store_and_fwd_flag: F || PULocationID: 6 || DOLocationID: 7 || payment_type: 8 || fare_amount: 9 || extra: 1 || mta_tax: 2 || tip_amount: 3 || tolls_amount: 4 || improvement_surcharge: 5 || total_amount: 6 || DOdatetime: 2019-01-01 || trip_duration: 9 ||")
     
     # Lines which should be present in the stdout file.
     STDOUT_LINES_PRESENT=("2018-01-01 --> 1")
@@ -221,10 +221,10 @@ function runTest2
     # List of strings which should be present in the results file.
     # ( |^)([^,]*)
     # $1"$2"
-    RESULTS_PRESENT=("2018-01-01 -->" "VendorID: 2 ||" "passenger_count: 3 ||" "trip_distance: 4 ||" "RatecodeID: 5 ||" "store_and_fwd_flag: F ||" "PULocationID: 6 ||" "DOLocationID: 7 ||" "payment_type: 8 ||" "fare_amount: 9 ||" "extra: 1 ||" "mta_tax: 2 ||" "tip_amount: 3 ||" "tolls_amount: 4 ||" "improvement_surcharge: 5 ||" "total_amount: 6 ||" "DOdatetime: 2018-01-01 ||" "trip_duration: 9 ||")
+    RESULTS_PRESENT=("2018-01-01 -->" "VendorID: 2 ||" "passenger_count: 3 ||" "trip_distance: 4 ||" "RatecodeID: 5 ||" "store_and_fwd_flag: F ||" "PULocationID: 6 ||" "DOLocationID: 7 ||" "payment_type: 8 ||" "fare_amount: 9 ||" "extra: 1 ||" "mta_tax: 2 ||" "tip_amount: 3 ||" "tolls_amount: 4 ||" "improvement_surcharge: 5 ||" "total_amount: 6 ||" "DOdatetime: 2019-01-01 ||" "trip_duration: 9 ||")
     
     # Lines which should be present in the results file.
-    RESULTS_LINES_PRESENT=("2018-01-01 --> VendorID: 2 || passenger_count: 3 || trip_distance: 4 || RatecodeID: 5 || store_and_fwd_flag: F || PULocationID: 6 || DOLocationID: 7 || payment_type: 8 || fare_amount: 9 || extra: 1 || mta_tax: 2 || tip_amount: 3 || tolls_amount: 4 || improvement_surcharge: 5 || total_amount: 6 || DOdatetime: 2018-01-01 || trip_duration: 9 ||")
+    RESULTS_LINES_PRESENT=("2018-01-01 --> VendorID: 2 || passenger_count: 3 || trip_distance: 4 || RatecodeID: 5 || store_and_fwd_flag: F || PULocationID: 6 || DOLocationID: 7 || payment_type: 8 || fare_amount: 9 || extra: 1 || mta_tax: 2 || tip_amount: 3 || tolls_amount: 4 || improvement_surcharge: 5 || total_amount: 6 || DOdatetime: 2019-01-01 || trip_duration: 9 ||")
     
     # Lines which should be present in the stdout file.
     STDOUT_LINES_PRESENT=("2018-01-01 --> 1")
