@@ -27,6 +27,8 @@ TEMP_RESULTS_FILE="temp_results"
 TEMP_COMPARISONS_FILE="temp_comparisons"
 # The filename for the input file.
 TEMP_INPUT_DATA_FILE="temp_input"
+# The filename for the stdin input file.
+TEMP_STDIN_INPUT_FILE="temp_stdin"
 
 function buildProgram
 {
@@ -61,8 +63,10 @@ function execTest
     
     # Write input data to file.
     printf "$2" " " > "$INPUT_DATA_FILE"
+    # Write stdin data to file.
+    printf "$3" " " > "$STDIN_DATA_FILE"
     TIMEOUT=0
-    timeout $TIMEOUT_LENGTH ./$1 "$INPUT_DATA_FILE" "$RESULTS_FILE" > "$STDOUT_FILE" <<< "$3"
+    timeout $TIMEOUT_LENGTH ./$1 "$INPUT_DATA_FILE" "$RESULTS_FILE" > "$STDOUT_FILE" < "$STDIN_DATA_FILE"
     RET_VAL=$?
     # If the timeout is hit, status 124 is returned.
     if [[ $RET_VAL == 124 ]]
@@ -1330,6 +1334,7 @@ TIMEOUT=0
 RESULTS_FILE="$RESULTS_FOLDER/$TEMP_RESULTS_FILE"
 STDOUT_FILE="$RESULTS_FOLDER/$TEMP_COMPARISONS_FILE"
 INPUT_DATA_FILE="$RESULTS_FOLDER/$TEMP_INPUT_DATA_FILE"
+STDIN_DATA_FILE="$RESULTS_FOLDER/$TEMP_STDIN_INPUT_FILE"
 
 PASSED_TESTS=0
 TOTAL_TESTS=10
