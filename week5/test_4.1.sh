@@ -53,7 +53,7 @@ TIMEOUT_LENGTH=2
 
 PROGRAM_NAME=$1
 
-EXPECTED=("Stack 1 created and empty." "Adding 1 to stack 1." "Taking top item from stack 1." "Top item on stack 1 was: 1." "Adding numbers 1 to 7 to stack 1." "Stack 1 empty when not all items removed!" "Stack 2 created and empty." "Taking items from stack 1 and adding them to stack 2." "Stack 1: 7, 6, 5, 4, 3, 2, 1" "Stack 1 emptied." "Taking items from stack 2 and printing them." "Stack 2: 1, 2, 3, 4, 5, 6, 7" "Stack 2 emptied.")
+EXPECTED=("Stack 1 created and empty." "Adding 1 to stack 1." "Taking top item from stack 1." "Top item on stack 1 was: 1." "Adding numbers 1 to 7 to stack 1." "Stack 1 not empty after items added." "Stack 2 created and empty." "Taking items from stack 1 and adding them to stack 2." "Stack 1: 7, 6, 5, 4, 3, 2, 1" "Stack 1 emptied." "Taking items from stack 2 and printing them." "Stack 2: 1, 2, 3, 4, 5, 6, 7" "Stack 2 emptied.")
 
 runGroupTest "$EXPECTED" "p_4.1_r_1.res"
 
