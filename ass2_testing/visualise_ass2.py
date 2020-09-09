@@ -15,7 +15,7 @@ def timelog(*args, **kwargs):
 
 def ass2_part_one(search_point, zoom_on_found):
 
-    program = subprocess.Popen(['bash', '-c', "cd submission && mkdir results && echo {} > results/stdin && rm *.o && make -B map1 && ./map1 /home/shared/ass2/clue.csv results/outfile < results/stdin".format(" ".join([str(n) for n in search_point]))], 
+    program = subprocess.Popen(['bash', '-c', "cd submission && mkdir -p results && (echo {} > results/stdin) && rm -f *.o && make -B map1 && (./map1 /home/shared/ass2/clue.csv results/outfile < results/stdin)".format(" ".join([str(n) for n in search_point]))], 
                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     timelog(" - stdout - ")
     print(program.stdout.read().decode())
@@ -61,7 +61,7 @@ def ass2_part_one(search_point, zoom_on_found):
         ax.set_xlim(lon[0] - 0.01, lon[0] + 0.01)
 
 def ass2_part_two(search_point, radius, zoom_on_found):
-    program = subprocess.Popen(['bash', '-c', "cd submission && mkdir results && echo {} > results/stdin && rm *.o && make -B map2 && ./map2 /home/shared/ass2/clue.csv results/outfile < results/stdin".format("{} {}".format(" ".join([str(n) for n in search_point]), radius))], 
+    program = subprocess.Popen(['bash', '-c', "cd submission && mkdir -p results && echo {} > results/stdin && rm -f *.o && make -B map2 && ./map2 /home/shared/ass2/clue.csv results/outfile < results/stdin".format("{} {}".format(" ".join([str(n) for n in search_point]), radius))], 
                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     timelog(" - stdout - ")
     print(program.stdout.read().decode())
