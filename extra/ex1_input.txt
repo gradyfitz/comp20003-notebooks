@@ -1,4 +1,0 @@
-input line 1
-input line 2
-input line 3
-4th input line

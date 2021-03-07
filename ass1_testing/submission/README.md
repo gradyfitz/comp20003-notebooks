@@ -1,1 +1,0 @@
-This folder is meant for your submission, put it here for testing. =)
